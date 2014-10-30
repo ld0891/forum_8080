@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ForumSectionViewController">
+            <connections>
+                <outlet property="tableView" destination="2y4-te-cfE" id="rk6-mw-yYc"/>
+                <outlet property="titleLabel" destination="tfu-x7-7Na" id="wBr-uP-doa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2y4-te-cfE">
+                    <rect key="frame" x="0.0" y="64" width="120" height="504"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.91372549020000005" green="0.90588235289999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="sectionIndexBackgroundColor" red="0.9137254901960784" green="0.90588235294117647" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="anc-H6-bJC"/>
+                        <outlet property="delegate" destination="-1" id="Ov6-m6-AeM"/>
+                    </connections>
+                </tableView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="21" text="版块列表" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfu-x7-7Na">
+                    <rect key="frame" x="15" y="32" width="100" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tfu-x7-7Na" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="4aJ-zN-daB"/>
+                <constraint firstItem="2y4-te-cfE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="KKy-cB-azs"/>
+                <constraint firstItem="2y4-te-cfE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KQW-6b-gnH"/>
+                <constraint firstAttribute="trailing" secondItem="2y4-te-cfE" secondAttribute="trailing" id="bWV-bb-GUb"/>
+                <constraint firstItem="tfu-x7-7Na" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="wC1-wX-Agr"/>
+                <constraint firstAttribute="bottom" secondItem="2y4-te-cfE" secondAttribute="bottom" id="zOt-K4-RZ1"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

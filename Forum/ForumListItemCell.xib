@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="52" id="1Uz-7g-8tv" customClass="ForumListItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Uz-7g-8tv" id="6in-xS-40z">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="243" placeholderIntrinsicHeight="21" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="250" translatesAutoresizingMaskIntoConstraints="NO" id="8qx-yC-Tu3">
+                        <rect key="frame" x="57" y="32" width="250" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="120" placeholderIntrinsicHeight="21" text="Poster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgf-F9-hK1">
+                        <rect key="frame" x="57" y="6" width="120" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="42" placeholderIntrinsicHeight="21" text="View" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaJ-vy-k4V">
+                        <rect key="frame" x="228" y="6" width="42" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeO-cM-2Eg">
+                        <rect key="frame" x="283" y="6" width="24" height="13.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nbR-ZI-UW1">
+                        <rect key="frame" x="13" y="6" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="nbR-ZI-UW1" secondAttribute="height" multiplier="1:1" id="MkK-pM-U2O"/>
+                            <constraint firstAttribute="height" constant="36" id="mtd-OE-ha5"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AeO-cM-2Eg" firstAttribute="top" secondItem="6in-xS-40z" secondAttribute="top" constant="6" id="FND-F7-bRN"/>
+                    <constraint firstItem="nbR-ZI-UW1" firstAttribute="top" secondItem="6in-xS-40z" secondAttribute="top" constant="6" id="LdJ-Jl-IWx"/>
+                    <constraint firstItem="8qx-yC-Tu3" firstAttribute="top" secondItem="dgf-F9-hK1" secondAttribute="bottom" constant="5" id="MLF-pz-W3N"/>
+                    <constraint firstItem="dgf-F9-hK1" firstAttribute="leading" secondItem="nbR-ZI-UW1" secondAttribute="trailing" constant="8" id="SUf-Ls-BJn"/>
+                    <constraint firstItem="dgf-F9-hK1" firstAttribute="leading" secondItem="6in-xS-40z" secondAttribute="leading" constant="57" id="TD3-1Q-P0Q"/>
+                    <constraint firstItem="nbR-ZI-UW1" firstAttribute="leading" secondItem="6in-xS-40z" secondAttribute="leading" constant="13" id="cTU-6a-Bni"/>
+                    <constraint firstAttribute="trailing" secondItem="AeO-cM-2Eg" secondAttribute="trailing" constant="13" id="eFU-zQ-YQ1"/>
+                    <constraint firstItem="AeO-cM-2Eg" firstAttribute="leading" secondItem="gaJ-vy-k4V" secondAttribute="trailing" constant="13" id="fYy-Qt-iAU"/>
+                    <constraint firstAttribute="bottom" secondItem="8qx-yC-Tu3" secondAttribute="bottom" priority="900" constant="6" id="isY-Cm-J8z"/>
+                    <constraint firstAttribute="trailing" secondItem="8qx-yC-Tu3" secondAttribute="trailing" constant="13" id="jhD-GF-fNz"/>
+                    <constraint firstItem="8qx-yC-Tu3" firstAttribute="leading" secondItem="6in-xS-40z" secondAttribute="leading" constant="57" id="lTP-Pq-oZC"/>
+                    <constraint firstItem="dgf-F9-hK1" firstAttribute="top" secondItem="6in-xS-40z" secondAttribute="top" constant="6" id="no3-aZ-JV8"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="nbR-ZI-UW1" secondAttribute="bottom" constant="6" id="sqR-28-QWK"/>
+                    <constraint firstItem="gaJ-vy-k4V" firstAttribute="top" secondItem="6in-xS-40z" secondAttribute="top" constant="6" id="w5M-so-XZN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarView" destination="nbR-ZI-UW1" id="KPT-ln-ip2"/>
+                <outlet property="dateLabel" destination="AeO-cM-2Eg" id="WkN-tR-JaV"/>
+                <outlet property="posterLabel" destination="dgf-F9-hK1" id="BtD-K2-HuF"/>
+                <outlet property="titleLabel" destination="8qx-yC-Tu3" id="8cb-ab-DXS"/>
+                <outlet property="viewLabel" destination="gaJ-vy-k4V" id="AbS-TN-iFz"/>
+            </connections>
+            <point key="canvasLocation" x="63" y="250"/>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
