@@ -17,7 +17,6 @@
 + (instancetype)sharedStore;
 - (void)addItem:(ForumDetailItem *)theItem;
 - (void)removeAllItems;
-- (void)addItemByArray:(NSArray *)theArray;
 - (void)copyAllItems:(NSArray *)theArray;
 
 @end

@@ -198,7 +198,7 @@
 - (void)loginWithUsername:(NSString *)username withPassword:(NSString *)password andCode:(NSString *)code
 {
     [SVProgressHUD showWithStatus: @"登录中..." maskType: SVProgressHUDMaskTypeClear];
-    NSString *pswdMD5 = [[password MD5String] lowercaseString];
+    NSString *pswdMD5 = [password MD5String];
     NSString *loginURL = [[ForumInfo sharedInfo] loginURL];
     NSString *codeURL = [[ForumInfo sharedInfo] codeURL];
     
@@ -446,7 +446,7 @@
         }
         [tableView reloadData];
         [indicator stopAnimating];
-        
+        [_listController.refreshControl endRefreshing];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error.localizedDescription);
     }];
@@ -468,6 +468,7 @@
         }
         [tableView reloadData];
         [indicator stopAnimating];
+        [_detailController.refreshControl endRefreshing];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error.localizedDescription);

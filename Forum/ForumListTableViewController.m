@@ -121,14 +121,20 @@
     UIColor *backgroundColor = [[ForumInfo sharedInfo] bgColor];
     self.tableView.backgroundColor = backgroundColor;
     self.clearsSelectionOnViewWillAppear = YES;
+    self.tableView.estimatedRowHeight = 44.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
-    
-    /*
     // Get refresh control feature
     UIRefreshControl *listRefresh = [[UIRefreshControl alloc] init];
     [listRefresh addTarget:self action:@selector(refreshList) forControlEvents: UIControlEventValueChanged];
+    listRefresh.backgroundColor = [[ForumInfo sharedInfo] darkBgColor];
+    listRefresh.tintColor = [[ForumInfo sharedInfo] lightTextColor];
+    NSDictionary *attrsDic = @{ NSForegroundColorAttributeName : [[ForumInfo sharedInfo] lightTextColor],
+                                NSFontAttributeName : [UIFont preferredFontForTextStyle: @"UIFontTextStyleCaption1"] };
+    NSAttributedString *refreshString = [[NSAttributedString alloc] initWithString: @"更新中"
+                                                                        attributes: attrsDic];
+    listRefresh.attributedTitle = refreshString;
     self.refreshControl = listRefresh;
-     */
         
     // Config the reveal feature
     [revealController tapGestureRecognizer];
@@ -355,6 +361,7 @@
     if ( [ForumInfo sharedInfo].listHasNextPage && indexPath.row + 1 == [self tableView:tableView numberOfRowsInSection: 0] ) {
         return 44;
     }
+    
     else {
         return [self heightForForumListCellAtIndexPath: indexPath];
     }

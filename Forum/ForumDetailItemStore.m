@@ -18,17 +18,7 @@
 
 - (void)copyAllItems:(NSArray *)theArray
 {
-    for ( ForumDetailItem *item in theArray ) {
-        [_privateItems addObject: item];
-    }
-}
-
-
-- (void)addItemByArray:(NSArray *)theArray
-{
-    for ( ForumDetailItem *item in theArray ) {
-        [self.privateItems addObject: item];
-    }
+    [self.privateItems addObjectsFromArray: theArray];
 }
 
 - (void)removeAllItems

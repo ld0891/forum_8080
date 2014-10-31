@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EDA3FD51-8951-4902-AAFE-8AD7189712BA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>极速社区</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E5A31678B59A7192F1640594FC00F2CE13542819</key>
+		<string>github.com:ld0891/forum_8080.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>极速社区.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E5A31678B59A7192F1640594FC00F2CE13542819</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:ld0891/forum_8080.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E5A31678B59A7192F1640594FC00F2CE13542819</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E5A31678B59A7192F1640594FC00F2CE13542819</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Forum</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -132,6 +132,18 @@
     swipeRecognizer.delaysTouchesBegan = YES;
     swipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer: swipeRecognizer];
+    
+    // Get refresh control feature
+    UIRefreshControl *listRefresh = [[UIRefreshControl alloc] init];
+    [listRefresh addTarget:self action:@selector(refreshDetail) forControlEvents: UIControlEventValueChanged];
+    listRefresh.backgroundColor = [[ForumInfo sharedInfo] darkBgColor];
+    listRefresh.tintColor = [[ForumInfo sharedInfo] lightTextColor];
+    NSDictionary *attrsDic = @{ NSForegroundColorAttributeName : [[ForumInfo sharedInfo] lightTextColor],
+                                NSFontAttributeName : [UIFont preferredFontForTextStyle: @"UIFontTextStyleCaption1"] };
+    NSAttributedString *refreshString = [[NSAttributedString alloc] initWithString: @"更新中"
+                                                                        attributes: attrsDic];
+    listRefresh.attributedTitle = refreshString;
+    self.refreshControl = listRefresh;
 }
 
 - (void)swipeBack
