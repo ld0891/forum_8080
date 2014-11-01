@@ -447,6 +447,7 @@
         [tableView reloadData];
         [indicator stopAnimating];
         [_listController.refreshControl endRefreshing];
+        
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error.localizedDescription);
     }];
@@ -459,6 +460,7 @@
     
     self.responseSerializer = [PostDetailResponseSerializer serializer];
     [self GET: postURL parameters: nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        [[ForumDetailItemStore sharedStore] removeAllItems];
         [[ForumDetailItemStore sharedStore] copyAllItems: [responseObject objectForKey: @"array"]];
         [ForumInfo sharedInfo].detailNextPageURL = [responseObject objectForKey: @"url"];
         [ForumInfo sharedInfo].postFormhash = [responseObject objectForKey: @"formhash"];
