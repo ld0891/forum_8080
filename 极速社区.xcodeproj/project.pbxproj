@@ -36,6 +36,7 @@
 		5AC5DCC3198B86AB001A8FED /* ForumListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC5DCC2198B86AB001A8FED /* ForumListItemCell.xib */; };
 		5ACED32819AF0E360074546B /* ForumLoadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACED32619AF0E360074546B /* ForumLoadingCell.m */; };
 		5ACED32919AF0E360074546B /* ForumLoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ACED32719AF0E360074546B /* ForumLoadingCell.xib */; };
+		5AD4F9911A05361E0052AA12 /* 1Password.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD4F9901A05361E0052AA12 /* 1Password.xcassets */; };
 		5AD83F3919991AA000DEE8D0 /* ForumLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD83F3719991AA000DEE8D0 /* ForumLoginViewController.m */; };
 		5AD83F3A19991AA000DEE8D0 /* ForumLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD83F3819991AA000DEE8D0 /* ForumLoginViewController.xib */; };
 		5AE22B4919BABFD000828DF1 /* ForumInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE22B4719BABFD000828DF1 /* ForumInputViewController.m */; };
@@ -125,6 +126,7 @@
 		5ACED32519AF0E360074546B /* ForumLoadingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForumLoadingCell.h; path = Forum/ForumLoadingCell.h; sourceTree = "<group>"; };
 		5ACED32619AF0E360074546B /* ForumLoadingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForumLoadingCell.m; path = Forum/ForumLoadingCell.m; sourceTree = "<group>"; };
 		5ACED32719AF0E360074546B /* ForumLoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ForumLoadingCell.xib; path = Forum/ForumLoadingCell.xib; sourceTree = "<group>"; };
+		5AD4F9901A05361E0052AA12 /* 1Password.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = 1Password.xcassets; sourceTree = "<group>"; };
 		5AD830F0198C758A00903B99 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		5AD83F3619991AA000DEE8D0 /* ForumLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForumLoginViewController.h; path = Forum/ForumLoginViewController.h; sourceTree = "<group>"; };
 		5AD83F3719991AA000DEE8D0 /* ForumLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForumLoginViewController.m; path = Forum/ForumLoginViewController.m; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				5AF34A11198A2EE300DB42C6 /* AppDelegate.h */,
 				5AF34A12198A2EE300DB42C6 /* AppDelegate.m */,
 				5AF34A14198A2EE300DB42C6 /* Images.xcassets */,
+				5AD4F9901A05361E0052AA12 /* 1Password.xcassets */,
 				5AF34A09198A2EE300DB42C6 /* Supporting Files */,
 			);
 			path = Forum;
@@ -478,6 +481,7 @@
 				5A6606B019A249400025C619 /* detailPlaceholder.jpg in Resources */,
 				5AE22B4A19BABFD000828DF1 /* ForumInputViewController.xib in Resources */,
 				5A6606AD19A249400025C619 /* detailPlaceholder@2x.jpg in Resources */,
+				5AD4F9911A05361E0052AA12 /* 1Password.xcassets in Resources */,
 				5A6D714119C14583007F901C /* ForumUserViewController.xib in Resources */,
 				5ABEA8AC1991F83400C1CB33 /* ForumDetailItemCell.xib in Resources */,
 				5AF34A15198A2EE300DB42C6 /* Images.xcassets in Resources */,

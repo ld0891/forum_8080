@@ -1,4 +1,5 @@
 PODS:
+  - 1PasswordExtension (1.1)
   - AFNetworking (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
@@ -36,6 +37,7 @@ PODS:
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
+  - 1PasswordExtension (~> 1.1.0)
   - AFNetworking
   - hpple (~> 0.1)
   - MWPhotoBrowser
@@ -43,6 +45,7 @@ DEPENDENCIES:
   - SWRevealViewController
 
 SPEC CHECKSUMS:
+  1PasswordExtension: 37d1488cf049b8bc0811beb7b52a19f8f803f7c8
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   DACircularProgress: 3b41941891a56dc6aa17971f5322a9a38a6f446e
   hpple: f4eb7c21a8db83ec264e5d614ec7509e10e5adec

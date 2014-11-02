@@ -5,3 +5,4 @@ pod 'hpple', '~> 0.1'
 pod 'SWRevealViewController'
 pod 'SVProgressHUD', :head
 pod 'MWPhotoBrowser'
+pod '1PasswordExtension', '~> 1.1.0'

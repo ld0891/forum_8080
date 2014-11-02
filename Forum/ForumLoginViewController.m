@@ -21,6 +21,7 @@
 
 #import <SWRevealViewController.h>
 #import <SVProgressHUD.h>
+#import <OnePasswordExtension.h>
 
 static NSString * const loginURL = @"member.php";
 static NSString * const codeURL = @"misc.php";
@@ -32,6 +33,7 @@ static NSString * const codeURL = @"misc.php";
 @property (weak, nonatomic) IBOutlet UITextField *codeField;
 @property (weak, nonatomic) IBOutlet UIImageView *codeView;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
+@property (weak, nonatomic) IBOutlet UIButton *onePasswordButton;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pswdLabel;
 @property (weak, nonatomic) IBOutlet UILabel *codeLabel;
@@ -50,6 +52,32 @@ static NSString * const codeURL = @"misc.php";
 - (IBAction)backgroundTapped:(id)sender
 {
     [self.view endEditing: YES];
+}
+
+- (IBAction)findLoginFrom1Password:(id)sender {
+    
+    if ( ![[OnePasswordExtension sharedExtension] isAppExtensionAvailable] ) {
+        [SVProgressHUD showErrorWithStatus: @"未安装1Password"];
+        return;
+    }
+    
+    [self.view endEditing: YES];
+    __weak typeof (self) miniMe = self;
+    [[OnePasswordExtension sharedExtension] findLoginForURLString:@"http://8080.net"
+                                                forViewController:self
+                                                           sender:sender
+                                                       completion:^(NSDictionary *loginDict, NSError *error) {
+        if (!loginDict) {
+            if (error.code != AppExtensionErrorCodeCancelledByUser) {
+                NSLog(@"Error invoking 1Password App Extension for find login: %@", error);
+            }
+            return;
+        }
+        __strong typeof(self) strongMe = miniMe;
+        strongMe.nameField.text = loginDict[AppExtensionUsernameKey];
+        strongMe.pswdField.text = loginDict[AppExtensionPasswordKey];
+        [strongMe.codeField becomeFirstResponder];
+    }];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -101,11 +129,16 @@ static NSString * const codeURL = @"misc.php";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.view.translatesAutoresizingMaskIntoConstraints = YES;
     
     self.client = [ForumHTTPClient sharedClient];
     self.client.loginController = self;
     
-    // Add click event on code
+    // Set 1Password Button hidden if no 1Password app is available
+    // Then expand the original login button
+    // [self.onePasswordButton setHidden:![[OnePasswordExtension sharedExtension] isAppExtensionAvailable]];
+    
+    // Add click event on code image
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector( codeTapped )];
     singleTap.numberOfTapsRequired = 1;
     self.codeView.userInteractionEnabled = YES;
