@@ -10,6 +10,7 @@
 #import "ForumDetailItem.h"
 #import "ForumImgCell.h"
 #import "ForumInfo.h"
+#import "UIMarginLabel.h"
 
 @implementation ForumDetailItemCell
 

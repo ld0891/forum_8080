@@ -13,6 +13,7 @@
 		5A10E4391994B4C200AAB828 /* ForumHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E4381994B4C200AAB828 /* ForumHTTPClient.m */; };
 		5A1FEFA9199D0E7F007A7D95 /* RawResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1FEFA8199D0E7F007A7D95 /* RawResponseSerializer.m */; };
 		5A28989819ACDE21001D4B41 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A28989719ACDE21001D4B41 /* NSString+HTML.m */; };
+		5A3055381A08B4E000E464B0 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A3055371A08B4E000E464B0 /* Settings.bundle */; };
 		5A34A52D199E4FE500FEAA71 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A34A52C199E4FE500FEAA71 /* NSString+MD5.m */; };
 		5A3B2A8C19B5AE2400BCFBDE /* ForumImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B2A8B19B5AE2400BCFBDE /* ForumImgCell.m */; };
 		5A40752C19B75AFE008BD573 /* UIMarginLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A40752B19B75AFE008BD573 /* UIMarginLabel.m */; };
@@ -90,6 +91,7 @@
 		5A1FEFA8199D0E7F007A7D95 /* RawResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RawResponseSerializer.m; path = Forum/RawResponseSerializer.m; sourceTree = "<group>"; };
 		5A28989619ACDE21001D4B41 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+HTML.h"; path = "Forum/NSString+HTML.h"; sourceTree = "<group>"; };
 		5A28989719ACDE21001D4B41 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+HTML.m"; path = "Forum/NSString+HTML.m"; sourceTree = "<group>"; };
+		5A3055371A08B4E000E464B0 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		5A34A52B199E4FE500FEAA71 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MD5.h"; path = "Forum/NSString+MD5.h"; sourceTree = "<group>"; };
 		5A34A52C199E4FE500FEAA71 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5.m"; path = "Forum/NSString+MD5.m"; sourceTree = "<group>"; };
 		5A3B2A8A19B5AE2400BCFBDE /* ForumImgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForumImgCell.h; path = Forum/ForumImgCell.h; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				5AF34A12198A2EE300DB42C6 /* AppDelegate.m */,
 				5AF34A14198A2EE300DB42C6 /* Images.xcassets */,
 				5AD4F9901A05361E0052AA12 /* 1Password.xcassets */,
+				5A3055371A08B4E000E464B0 /* Settings.bundle */,
 				5AF34A09198A2EE300DB42C6 /* Supporting Files */,
 			);
 			path = Forum;
@@ -484,6 +487,7 @@
 				5AD4F9911A05361E0052AA12 /* 1Password.xcassets in Resources */,
 				5A6D714119C14583007F901C /* ForumUserViewController.xib in Resources */,
 				5ABEA8AC1991F83400C1CB33 /* ForumDetailItemCell.xib in Resources */,
+				5A3055381A08B4E000E464B0 /* Settings.bundle in Resources */,
 				5AF34A15198A2EE300DB42C6 /* Images.xcassets in Resources */,
 				5AC5DCC3198B86AB001A8FED /* ForumListItemCell.xib in Resources */,
 				5AE682EA199B342D00A10ABC /* ForumSectionViewController.xib in Resources */,

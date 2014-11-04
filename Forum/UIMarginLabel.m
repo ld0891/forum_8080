@@ -29,7 +29,7 @@
 */
 
 - (void)drawTextInRect:(CGRect)rect {
-    UIEdgeInsets insets = {6, 6, 6, 6};
+    UIEdgeInsets insets = {3, 3, 3, 3};
     return [super drawTextInRect:UIEdgeInsetsInsetRect(rect, insets)];
 }
 

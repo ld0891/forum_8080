@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *quoteLabel;
 @property (weak, nonatomic) IBOutlet UILabel *levelLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *imageCollectionView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *VerticalSpaceBetweenQuoteAndContent;
 
 - (void)setCollectionViewDataSourceAndDelegate:(id<UICollectionViewDataSource, UICollectionViewDelegate>)item index: (NSInteger)index;
 
