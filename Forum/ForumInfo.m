@@ -106,6 +106,7 @@
                             @"站务&招商": @"SettingsShowForumAffair" };
         
         [self initSectionNames];
+        NSLog( @"sectionNames count: %li", (long)[_sectionNames count] );
         
         _sectionDic = @{ @"微软同盟": @101,
                          @"安卓乐园": @91,
@@ -197,8 +198,11 @@
     
     for ( NSString *sectionName in _privateSectionNames) {
         NSString *sectionKey = _sectionKeyDic[sectionName];
-        BOOL enabled = [defaults boolForKey: sectionKey];
-        if ( enabled ) {
+        BOOL disabled = [defaults boolForKey: sectionKey];
+        if ( disabled ) {
+            continue;
+        }
+        else {
             [sectionNames addObject: sectionName];
         }
     }

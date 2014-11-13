@@ -34,11 +34,6 @@
     flvc.listController = fltvc;
     fsvc.listController = fltvc;
     
-    /*
-    ForumDetailTableViewController *fdtvc = [[ForumDetailTableViewController alloc] init];
-    [ForumInfo sharedInfo].postURL = @"thread-378159-1-1.html";
-     */
-    
     UINavigationController *frontController = [[UINavigationController alloc] initWithRootViewController: fltvc];
     
     UIColor *barColor = [[ForumInfo sharedInfo] navBgColor];
