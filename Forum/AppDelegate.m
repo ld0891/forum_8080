@@ -24,6 +24,43 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    // Deal with NSUserDefaults
+    NSDictionary *defaultsDictionary = @{ @"微软同盟": @YES,
+                                          @"安卓乐园": @YES,
+                                          @"苹果之家": @YES,
+                                          @"色友俱乐部": @YES,
+                                          @"宽带3G": @YES,
+                                          @"硬件高手": @YES,
+                                          @"我爱我家": @YES,
+                                          @"投资理财": @YES,
+                                          @"影音人生": @YES,
+                                          @"游戏世界": @YES,
+                                          @"强身健体": @YES,
+                                          @"极速汽车": @YES,
+                                          @"美食旅游": @YES,
+                                          @"古城大爱": @YES,
+                                          @"亲亲宝贝": @YES,
+                                          @"点滴生活": @YES,
+                                          @"电脑散件": @YES,
+                                          @"配件外设": @YES,
+                                          @"整机风云": @YES,
+                                          @"时尚本本": @YES,
+                                          @"潮流数码": @YES,
+                                          @"移动天下": @YES,
+                                          @"服饰鞋帽": @YES,
+                                          @"汽车服务": @YES,
+                                          @"吃货天堂": @YES,
+                                          @"跳蚤市场": @YES,
+                                          @"海淘代购": @YES,
+                                          @"人才招聘": @YES,
+                                          @"杂货物品": @YES,
+                                          @"旺铺租赁": @YES,
+                                          @"家政服务": @YES,
+                                          @"站务&招商": @YES };
+    [[NSUserDefaults standardUserDefaults] registerDefaults: defaultsDictionary];
+    
+    // Deal with styling
     self.window.tintColor = [[ForumInfo sharedInfo] buttonColor];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [[ForumInfo sharedInfo] textColor]}];
     

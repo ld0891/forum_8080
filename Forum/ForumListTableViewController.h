@@ -10,8 +10,9 @@
 
 #import <UIKit/UIKit.h>
 #import <SWRevealViewController.h>
+#import "ForumHTTPClient.h"
 
-@interface ForumListTableViewController : UITableViewController <SWRevealViewControllerDelegate>
+@interface ForumListTableViewController : UITableViewController <SWRevealViewControllerDelegate, ForumHTTPClientListDelegate>
 
 @property (nonatomic, retain) ForumSectionViewController *sectionController;
 

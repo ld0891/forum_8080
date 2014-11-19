@@ -16,14 +16,14 @@
 @property (nonatomic, retain) NSNumber *replyID;
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSString *posterName;
-@property (assign) NSInteger posterID;
+@property (nonatomic, assign) NSInteger posterID;
 @property (nonatomic, retain) NSString *posterAvatarURL;
 @property (nonatomic, retain) NSDate *postDate;
 @property (nonatomic, retain) NSString *chineseDate;
 @property (nonatomic, retain) NSString *postContent;
-@property (assign) BOOL hasQuote;
+@property (nonatomic, assign) BOOL hasQuote;
 @property (nonatomic, retain) NSString *quoteContent;
-@property (assign) BOOL hasImage;
+@property (nonatomic, assign) BOOL hasImage;
 @property (nonatomic, readonly) NSArray *imgArray;
 @property (nonatomic, readonly) NSDictionary *imageDic;
 

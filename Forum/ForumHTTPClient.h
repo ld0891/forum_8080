@@ -12,6 +12,13 @@
 @class ForumLoginViewController;
 @class ForumListTableViewController;
 @class ForumUserViewController;
+@class ForumHTTPClient;
+
+@protocol ForumHTTPClientListDelegate
+
+- (void)httpClient: (ForumHTTPClient *)client didReceiveListData: (NSDictionary *)listData;
+
+@end
 
 @interface ForumHTTPClient : AFHTTPSessionManager
 
@@ -21,6 +28,7 @@
 @property (nonatomic, retain) ForumUserViewController *userController;
 
 @property (assign) BOOL isLoggedin;
+@property (nonatomic, weak) id <ForumHTTPClientListDelegate> listDelegate;
 
 + (ForumHTTPClient *)sharedClient;
 - (instancetype)initWithBaseURL:(NSURL *)url;
@@ -32,7 +40,7 @@
 - (BOOL)saveChanges;
 - (void)whetherIsLoggedIn;
 
-- (void)refreshListTableView:(UITableView *)tableView WithIndicator:(UIActivityIndicatorView *)indicator;
+- (void)refreshList;
 - (void)refreshDetailTableView:(UITableView *)tableView WithIndicator:(UIActivityIndicatorView *)indicator;
 
 - (void)loadMoreItemsIntoListTableView:(UITableView *)tableView;

@@ -51,6 +51,27 @@
     return [self init];
 }
 
+- (void)httpClient:(ForumHTTPClient *)client didReceiveListData:(NSDictionary *)listData
+{
+    if ( client == _client ) {
+        [[ForumListItemStore sharedStore] removeAllItems];
+        [[ForumListItemStore sharedStore] copyAllItems: [listData objectForKey: @"array"]];
+        [ForumInfo sharedInfo].listNextPageURL = [listData objectForKey: @"url"];
+        if ( [[ForumInfo sharedInfo].listNextPageURL length] > 1 ) {
+            [ForumInfo sharedInfo].listHasNextPage = YES;
+        }
+        self.navigationItem.title = [ForumInfo sharedInfo].sectionName;
+        [self.navigationController setNeedsStatusBarAppearanceUpdate];
+        [self.tableView setContentOffset:CGPointMake(0, -64) animated:NO];
+        [self.tableView reloadData];
+        [self.activityIndicator stopAnimating];
+        
+        if ( self.refreshControl.refreshing) {
+            [self.refreshControl endRefreshing];
+        }
+    }
+}
+
 #pragma mark - View configuration & Refresh
 
 -(void)viewDidLayoutSubviews
@@ -215,11 +236,8 @@
 
 - (void)refreshList
 {
-    self.navigationItem.title = [ForumInfo sharedInfo].sectionName;
-    [self.navigationController setNeedsStatusBarAppearanceUpdate];
-    [self.tableView setContentOffset:CGPointMake(0, -64) animated:NO];
-    
-    [self.client refreshListTableView: self.tableView WithIndicator: self.activityIndicator];
+    [self.activityIndicator startAnimating];
+    [self.client refreshList];
 }
 
 - (void)avatarTapped: (UITapGestureRecognizer *)tapRecognizer

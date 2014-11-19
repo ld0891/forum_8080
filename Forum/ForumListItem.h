@@ -21,6 +21,6 @@
 @property (nonatomic) NSInteger numOfView;
 @property (nonatomic, retain) NSString *postDetailURL;
 @property (nonatomic, retain) UIColor *fontColor;
-@property (assign) BOOL isRead;
+@property (nonatomic, assign) BOOL isRead;
 
 @end
