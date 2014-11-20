@@ -11,7 +11,7 @@
 @interface ForumInfo ()
 
 @property (nonatomic) NSMutableParagraphStyle *privateStyle;
-@property (nonatomic) NSArray *privateSectionNames;
+@property (nonatomic, retain) NSArray *privateSectionNames;
 @property (nonatomic) NSDictionary *sectionKeyDic;
 
 @end
@@ -194,16 +194,19 @@
 {
     NSMutableArray *sectionNames = [[NSMutableArray alloc] init];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults synchronize];
     
     for ( NSString *sectionName in _privateSectionNames) {
         NSString *sectionKey = _sectionKeyDic[sectionName];
-        BOOL disabled = [defaults boolForKey: sectionKey];
-        if ( disabled ) {
-            continue;
+        BOOL enabled = [defaults boolForKey: sectionKey];
+        if ( enabled ) {
+            [sectionNames addObject: sectionName];
+        }
+        else if ( !enabled )
+        {
+            NSLog( @"%@ disabled.", sectionName );
         }
         else {
-            [sectionNames addObject: sectionName];
+            NSLog( @"%@ not set.", sectionName );
         }
     }
     _sectionNames = sectionNames;
