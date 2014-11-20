@@ -198,8 +198,11 @@
     
     for ( NSString *sectionName in _privateSectionNames) {
         NSString *sectionKey = _sectionKeyDic[sectionName];
-        BOOL enabled = [defaults boolForKey: sectionKey];
-        if ( enabled ) {
+        BOOL disabled = [defaults boolForKey: sectionKey];
+        if ( disabled ) {
+            continue;
+        }
+        else {
             [sectionNames addObject: sectionName];
         }
     }

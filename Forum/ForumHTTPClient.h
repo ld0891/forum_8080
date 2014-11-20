@@ -20,6 +20,12 @@
 
 @end
 
+@protocol ForumHTTPClientDetailDelegate
+
+- (void)httpClient: (ForumHTTPClient *)client didReceiveDetailData:(NSDictionary *)detailData;
+
+@end
+
 @interface ForumHTTPClient : AFHTTPSessionManager
 
 @property (nonatomic, weak) ForumLoginViewController *loginController;
@@ -27,8 +33,9 @@
 @property (nonatomic, weak) ForumDetailTableViewController *detailController;
 @property (nonatomic, retain) ForumUserViewController *userController;
 
-@property (assign) BOOL isLoggedin;
+@property (nonatomic, assign) BOOL isLoggedin;
 @property (nonatomic, weak) id <ForumHTTPClientListDelegate> listDelegate;
+@property (nonatomic, weak) id <ForumHTTPClientDetailDelegate> detailDelegate;
 
 + (ForumHTTPClient *)sharedClient;
 - (instancetype)initWithBaseURL:(NSURL *)url;
@@ -41,7 +48,7 @@
 - (void)whetherIsLoggedIn;
 
 - (void)refreshList;
-- (void)refreshDetailTableView:(UITableView *)tableView WithIndicator:(UIActivityIndicatorView *)indicator;
+- (void)refreshDetail;
 
 - (void)loadMoreItemsIntoListTableView:(UITableView *)tableView;
 - (void)loadMoreItemsIntoDetailTableView:(UITableView *)tableView;

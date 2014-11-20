@@ -446,24 +446,15 @@
     }];
 }
 
-- (void)refreshDetailTableView:(UITableView *)tableView WithIndicator:(UIActivityIndicatorView *)indicator
+- (void)refreshDetail
 {
-    [indicator startAnimating];
     NSString *postURL = [ForumInfo sharedInfo].postURL;
     
     self.responseSerializer = [PostDetailResponseSerializer serializer];
     [self GET: postURL parameters: nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        [[ForumDetailItemStore sharedStore] removeAllItems];
-        [[ForumDetailItemStore sharedStore] copyAllItems: [responseObject objectForKey: @"array"]];
-        [ForumInfo sharedInfo].detailNextPageURL = [responseObject objectForKey: @"url"];
-        [ForumInfo sharedInfo].postFormhash = [responseObject objectForKey: @"formhash"];
         
-        if ( [[ForumInfo sharedInfo].detailNextPageURL length] > 1 ) {
-            [ForumInfo sharedInfo].detailHasNextPage = YES;
-        }
-        [tableView reloadData];
-        [indicator stopAnimating];
-        [_detailController.refreshControl endRefreshing];
+        NSDictionary *detailData = (NSDictionary *)responseObject;
+        [self.detailDelegate httpClient: self didReceiveDetailData: detailData];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error.localizedDescription);

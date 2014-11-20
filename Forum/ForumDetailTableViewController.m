@@ -26,7 +26,7 @@
 #import <MWPhotoBrowser/MWPhotoBrowser.h>
 #import <SWRevealViewController.h>
 
-@interface ForumDetailTableViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate>
+@interface ForumDetailTableViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate, ForumHTTPClientDetailDelegate>
 
 @property (nonatomic, weak) ForumHTTPClient *client;
 @property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
@@ -50,6 +50,23 @@
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
     return [self init];
+}
+
+- (void)httpClient:(ForumHTTPClient *)client didReceiveDetailData:(NSDictionary *)detailData
+{
+    if ( client == _client ) {
+        [[ForumDetailItemStore sharedStore] removeAllItems];
+        [[ForumDetailItemStore sharedStore] copyAllItems: [detailData objectForKey: @"array"]];
+        [ForumInfo sharedInfo].detailNextPageURL = [detailData objectForKey: @"url"];
+        [ForumInfo sharedInfo].postFormhash = [detailData objectForKey: @"formhash"];
+        
+        if ( [[ForumInfo sharedInfo].detailNextPageURL length] > 1 ) {
+            [ForumInfo sharedInfo].detailHasNextPage = YES;
+        }
+        [self.tableView reloadData];
+        [self.activityIndicator stopAnimating];
+        [self.refreshControl endRefreshing];
+    }
 }
 
 #pragma mark - View configuration & refresh
@@ -122,7 +139,8 @@
     
     self.client = [ForumHTTPClient sharedClient];
     self.client.detailController = self;
-    [self.client refreshDetailTableView: self.tableView WithIndicator: self.activityIndicator];
+    self.client.detailDelegate = self;
+    [self refreshDetail];
     
     // Get Swipe Gesture
     UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc]
@@ -170,7 +188,8 @@
 
 - (void)refreshDetail
 {
-    [self.client refreshDetailTableView: self.tableView WithIndicator: self.activityIndicator];
+    [self.activityIndicator startAnimating];
+    [self.client refreshDetail];
 }
 
 - (void)avatarTapped: (UITapGestureRecognizer *)tapRecognizer
