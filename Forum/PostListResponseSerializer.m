@@ -72,7 +72,7 @@
                              newItem.tid = [NSNumber numberWithInteger: [tid integerValue]];
                              newItem.uid = [NSNumber numberWithInteger: [uid integerValue]];;
                              // Replace HTML entites in title with correct characters.
-                             newItem.title = [title correctHtmlEntities];
+                             newItem.title = [title forum_correctHtmlEntities];
                              newItem.postDetailURL = url;
                              newItem.posterName = username;
                              newItem.numOfReply = [reply integerValue];

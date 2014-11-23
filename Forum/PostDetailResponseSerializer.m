@@ -179,9 +179,9 @@
                                                  options: NSLiteralSearch
                                                    range: NSMakeRange(0, [quoteContent length])];
             }
-            newItem.quoteContent = [quoteContent correctHtmlEntities];
+            newItem.quoteContent = [quoteContent forum_correctHtmlEntities];
         }
-        newItem.postContent = [postContent correctHtmlEntities];
+        newItem.postContent = [postContent forum_correctHtmlEntities];
         
         // Replace consecutive '\n's with only 2 of them
         NSArray *split = [newItem.postContent componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]];

@@ -342,25 +342,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView deselectRowAtIndexPath: indexPath animated: NO];
-    [ForumInfo sharedInfo].detailHasNextPage = NO;
-    [ForumInfo sharedInfo].detailNextPageURL = @"";
     for ( NSURLSessionDataTask *task in self.client.tasks ) {
         [task cancel];
     }
-    [[ForumDetailItemStore sharedStore] removeAllItems];
     
     ForumListItemCell *cell = (ForumListItemCell *)[tableView cellForRowAtIndexPath: indexPath];
-    
-    NSArray *theItems = [[ForumListItemStore sharedStore] allItems];
-    ForumListItem *item = theItems[indexPath.row];
-    item.isRead = YES;
     cell.titleLabel.textColor = [UIColor lightGrayColor];
     [cell.titleLabel setNeedsDisplay];
     
+    [ForumInfo sharedInfo].detailHasNextPage = NO;
+    [ForumInfo sharedInfo].detailNextPageURL = @"";
     ForumInfo *info = [ForumInfo sharedInfo];
+    NSArray *theItems = [[ForumListItemStore sharedStore] allItems];
+    ForumListItem *item = theItems[indexPath.row];
+    item.isRead = YES;
     info.postURL = item.postDetailURL;
     info.postName = item.title;
     info.postID = item.tid;
+    [[ForumDetailItemStore sharedStore] removeAllItems];
     
     ForumDetailTableViewController *detailTableViewController = [[ForumDetailTableViewController alloc] init];
         

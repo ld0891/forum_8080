@@ -198,7 +198,7 @@
 - (void)loginWithUsername:(NSString *)username withPassword:(NSString *)password andCode:(NSString *)code
 {
     [SVProgressHUD showWithStatus: @"登录中..." maskType: SVProgressHUDMaskTypeClear];
-    NSString *pswdMD5 = [password MD5String];
+    NSString *pswdMD5 = [password forum_MD5String];
     NSString *loginURL = [[ForumInfo sharedInfo] loginURL];
     NSString *codeURL = [[ForumInfo sharedInfo] codeURL];
     

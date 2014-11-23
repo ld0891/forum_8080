@@ -201,13 +201,6 @@
         if ( enabled ) {
             [sectionNames addObject: sectionName];
         }
-        else if ( !enabled )
-        {
-            NSLog( @"%@ disabled.", sectionName );
-        }
-        else {
-            NSLog( @"%@ not set.", sectionName );
-        }
     }
     _sectionNames = sectionNames;
 }

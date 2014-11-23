@@ -9,9 +9,9 @@
 #import "NSString+MD5.h"
 #import <CommonCrypto/CommonDigest.h>
 
-@implementation NSString (MD5)
+@implementation NSString (forum_MD5)
 
-- (NSString *)MD5String {
+- (NSString *)forum_MD5String {
     const char *cstr = [self UTF8String];
     unsigned char result[16];
     CC_MD5(cstr, (unsigned int)strlen(cstr), result);

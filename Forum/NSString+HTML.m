@@ -8,9 +8,9 @@
 
 #import "NSString+HTML.h"
 
-@implementation NSString (HTML)
+@implementation NSString (forum_HTML)
 
-- (NSString *)correctHtmlEntities
+- (NSString *)forum_correctHtmlEntities
 {
     NSString *result;
     

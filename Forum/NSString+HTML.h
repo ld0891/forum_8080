@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (HTML)
+@interface NSString (Forum_HTML)
 
-- (NSString *)correctHtmlEntities;
+- (NSString *)forum_correctHtmlEntities;
 
 @end
