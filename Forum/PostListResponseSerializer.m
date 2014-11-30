@@ -30,21 +30,17 @@
     NSMutableArray *responseArray = [[NSMutableArray alloc] init];    
     // Begin Parsing
     rawHtml = [rawHtml stringByReplacingOccurrencesOfString: @"\r\n" withString: @"\n"];
-    NSRange begin = [rawHtml rangeOfString: @"normalthread_"];
-    
-    NSString *nextPageRes = [rawHtml substringToIndex: begin.location];
-    NSString *res = [rawHtml substringFromIndex: begin.location];
 
     // Parse the next page url
     NSRegularExpression *nxtRegex = [NSRegularExpression
                                      regularExpressionWithPattern: @"</label><a href=\"(.*?)\\?t=1\" class=\"nxt\">下一页</a>"
                                      options: NSRegularExpressionDotMatchesLineSeparators
                                      error: error];
-    [nxtRegex enumerateMatchesInString: nextPageRes
+    [nxtRegex enumerateMatchesInString: rawHtml
                                options: 0
-                                 range: NSMakeRange(0, nextPageRes.length)
+                                 range: NSMakeRange(0, rawHtml.length)
                             usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
-                                nextPageURL = [nextPageRes substringWithRange: [result rangeAtIndex: 1]];
+                                nextPageURL = [rawHtml substringWithRange: [result rangeAtIndex: 1]];
                             }];
     
     NSRegularExpression *regex = [NSRegularExpression
@@ -53,21 +49,21 @@
                                   error: error
                                   ];
     
-    [regex enumerateMatchesInString: res
+    [regex enumerateMatchesInString: rawHtml
                             options: 0
-                              range: NSMakeRange(0, res.length)
+                              range: NSMakeRange(0, rawHtml.length)
                          usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
                              
                              ForumListItem *newItem = [[ForumListItem alloc] init];
                              
-                             NSString *tid = [res substringWithRange: [result rangeAtIndex: 1]];
-                             NSString *url = [res substringWithRange: [result rangeAtIndex: 2]];
-                             NSString *title = [res substringWithRange: [result rangeAtIndex: 3]];
-                             NSString *uid = [res substringWithRange: [result rangeAtIndex: 4]];
-                             NSString *username = [res substringWithRange: [result rangeAtIndex: 5]];
-                             NSString *date = [res substringWithRange: [result rangeAtIndex: 6]];
-                             NSString *reply = [res substringWithRange: [result rangeAtIndex: 7]];
-                             NSString *view = [res substringWithRange: [result rangeAtIndex: 8]];
+                             NSString *tid = [rawHtml substringWithRange: [result rangeAtIndex: 1]];
+                             NSString *url = [rawHtml substringWithRange: [result rangeAtIndex: 2]];
+                             NSString *title = [rawHtml substringWithRange: [result rangeAtIndex: 3]];
+                             NSString *uid = [rawHtml substringWithRange: [result rangeAtIndex: 4]];
+                             NSString *username = [rawHtml substringWithRange: [result rangeAtIndex: 5]];
+                             NSString *date = [rawHtml substringWithRange: [result rangeAtIndex: 6]];
+                             NSString *reply = [rawHtml substringWithRange: [result rangeAtIndex: 7]];
+                             NSString *view = [rawHtml substringWithRange: [result rangeAtIndex: 8]];
                              
                              newItem.tid = [NSNumber numberWithInteger: [tid integerValue]];
                              newItem.uid = [NSNumber numberWithInteger: [uid integerValue]];;

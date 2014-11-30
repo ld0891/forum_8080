@@ -64,9 +64,8 @@
     if ( self ) {
         self.requestSerializer = [AFHTTPRequestSerializer serializer];
         self.responseSerializer = [AFHTTPResponseSerializer serializer];
-        [self.requestSerializer setValue: @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36"
+        [self.requestSerializer setValue: @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.1.25 (KHTML, like Gecko) Version/8.0 Safari/600.1.25"
                       forHTTPHeaderField: @"User-Agent"];
-        
         NSString *path = [self archivePath];
         NSDictionary *rootDic = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
         
