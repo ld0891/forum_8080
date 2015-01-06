@@ -36,7 +36,7 @@
     self.avatarView.layer.borderColor = [[ForumInfo sharedInfo] darkBgColor].CGColor;
     
     UIColor *textColor = [[ForumInfo sharedInfo] textColor];
-    self.contentLabel.textColor = textColor;
+    self.contentTextView.textColor = textColor;
     self.quoteLabel.backgroundColor = [[ForumInfo sharedInfo] bgColor];
     
     UIColor *bgColor = [[ForumInfo sharedInfo] detailBgColor];

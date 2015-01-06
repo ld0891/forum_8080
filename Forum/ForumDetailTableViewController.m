@@ -382,16 +382,13 @@
     [attrContent addAttribute: NSParagraphStyleAttributeName
                       value: style
                       range: NSMakeRange(0, attrContent.length)];
-    cell.contentLabel.attributedText = attrContent;
+    cell.contentTextView.attributedText = attrContent;
     
     NSMutableAttributedString *attrQuote = [[NSMutableAttributedString alloc] initWithString: item.quoteContent];
     [attrQuote addAttribute: NSParagraphStyleAttributeName
                       value: style
                       range: NSMakeRange(0, attrQuote.length)];
     cell.quoteLabel.attributedText = attrQuote;
-    if ( [item.quoteContent length] > 0 ) {
-        cell.VerticalSpaceBetweenQuoteAndContent = 0;
-    }
     
     // Deal with images in post
     [cell setCollectionViewDataSourceAndDelegate: self index: indexPath.row];

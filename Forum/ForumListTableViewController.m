@@ -62,9 +62,9 @@
         }
         self.navigationItem.title = [ForumInfo sharedInfo].sectionName;
         [self.navigationController setNeedsStatusBarAppearanceUpdate];
-        [self.tableView setContentOffset:CGPointMake(0, -64) animated:NO];
         [self.tableView reloadData];
         [self.activityIndicator stopAnimating];
+        [self.tableView setContentOffset:CGPointMake(0, -64) animated:NO];
         
         if ( self.refreshControl.refreshing) {
             [self.refreshControl endRefreshing];
