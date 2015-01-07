@@ -37,6 +37,8 @@
     
     UIColor *textColor = [[ForumInfo sharedInfo] textColor];
     self.contentTextView.textColor = textColor;
+    self.contentTextView.backgroundColor = [UIColor clearColor];
+    self.contentTextView.font = [UIFont preferredFontForTextStyle: UIFontTextStyleSubheadline];
     self.quoteLabel.backgroundColor = [[ForumInfo sharedInfo] bgColor];
     
     UIColor *bgColor = [[ForumInfo sharedInfo] detailBgColor];
