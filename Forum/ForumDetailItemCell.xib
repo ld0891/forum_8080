@@ -4,12 +4,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForumDetailItemCell" rowHeight="273" id="KGk-i7-Jjw" customClass="ForumDetailItemCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="273"/>
+        <tableViewCell contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForumDetailItemCell" rowHeight="263" id="KGk-i7-Jjw" customClass="ForumDetailItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="263"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
@@ -18,37 +19,37 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="36" placeholderIntrinsicHeight="36" translatesAutoresizingMaskIntoConstraints="NO" id="rdC-Pn-gHD">
                         <rect key="frame" x="13" y="6" width="36" height="36"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="36" id="UVB-2h-mjE"/>
-                            <constraint firstAttribute="width" secondItem="rdC-Pn-gHD" secondAttribute="height" multiplier="1:1" id="lnc-oY-q6N"/>
+                            <constraint firstAttribute="height" constant="36" id="Tww-EU-dtO"/>
+                            <constraint firstAttribute="width" secondItem="rdC-Pn-gHD" secondAttribute="height" multiplier="1:1" id="af3-Mi-YDK"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="120" placeholderIntrinsicHeight="21" text="Poster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmK-MO-ZdW">
-                        <rect key="frame" x="54" y="27" width="120" height="21"/>
+                        <rect key="frame" x="54" y="33" width="120" height="21"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="31" placeholderIntrinsicHeight="21" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSg-Zo-FEa">
-                        <rect key="frame" x="276" y="27" width="31" height="21"/>
+                        <rect key="frame" x="276" y="33" width="31" height="21"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="294" placeholderIntrinsicHeight="61" text="Quote" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="294" translatesAutoresizingMaskIntoConstraints="NO" id="OJ1-A4-IOn" customClass="UIMarginLabel">
-                        <rect key="frame" x="13" y="54" width="294" height="61"/>
+                        <rect key="frame" x="13" y="44" width="294" height="61"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="37" placeholderIntrinsicHeight="21" text="Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNd-MC-jUx">
-                        <rect key="frame" x="270" y="8" width="37" height="21"/>
+                        <rect key="frame" x="270" y="6" width="37" height="21"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="294" placeholderIntrinsicHeight="76" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="735-hL-FCk">
-                        <rect key="frame" x="13" y="193" width="294" height="76"/>
+                        <rect key="frame" x="13" y="185" width="294" height="76"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="joe-zD-t4l">
                             <size key="itemSize" width="145" height="145"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -57,35 +58,33 @@
                         </collectionViewFlowLayout>
                         <cells/>
                     </collectionView>
-                    <textView autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="294" placeholderIntrinsicHeight="73" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxL-Jk-QlK">
-                        <rect key="frame" x="5" y="118" width="310" height="73"/>
+                    <textView autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" placeholderIntrinsicWidth="294" placeholderIntrinsicHeight="73" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxL-Jk-QlK">
+                        <rect key="frame" x="5" y="109" width="307" height="73"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                         <textInputTraits key="textInputTraits"/>
                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                     </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="OJ1-A4-IOn" firstAttribute="top" secondItem="CmK-MO-ZdW" secondAttribute="bottom" constant="6" id="4Av-G2-ffx"/>
-                    <constraint firstItem="XxL-Jk-QlK" firstAttribute="top" secondItem="OJ1-A4-IOn" secondAttribute="bottom" constant="3" id="634-fC-LsX"/>
-                    <constraint firstItem="rdC-Pn-gHD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="7mE-Hc-hy2"/>
-                    <constraint firstAttribute="trailing" secondItem="OSg-Zo-FEa" secondAttribute="trailing" constant="13" id="AgC-Mj-KFI"/>
-                    <constraint firstAttribute="trailing" secondItem="XxL-Jk-QlK" secondAttribute="trailing" constant="5" id="AwC-Ya-aYf"/>
-                    <constraint firstItem="XxL-Jk-QlK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="DaN-pD-Cd8"/>
-                    <constraint firstAttribute="bottom" secondItem="735-hL-FCk" secondAttribute="bottom" priority="900" constant="3" id="JXC-vi-feZ"/>
-                    <constraint firstAttribute="trailing" secondItem="735-hL-FCk" secondAttribute="trailing" constant="13" id="Lgo-Kw-T2a"/>
-                    <constraint firstItem="CmK-MO-ZdW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="54" id="OCy-HM-c2B"/>
-                    <constraint firstItem="OJ1-A4-IOn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="PFX-1C-frX"/>
-                    <constraint firstAttribute="trailing" secondItem="OJ1-A4-IOn" secondAttribute="trailing" constant="13" id="QBJ-T5-Nhm"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XxL-Jk-QlK" secondAttribute="bottom" constant="5" id="SuX-5o-cqm"/>
-                    <constraint firstItem="rdC-Pn-gHD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="UXb-b1-lYg"/>
-                    <constraint firstItem="735-hL-FCk" firstAttribute="top" secondItem="XxL-Jk-QlK" secondAttribute="bottom" constant="2" id="Y2M-Iu-WOT"/>
-                    <constraint firstItem="735-hL-FCk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="c9K-D4-FaN"/>
-                    <constraint firstAttribute="trailing" secondItem="CNd-MC-jUx" secondAttribute="trailing" constant="13" id="cQX-TP-ePa"/>
-                    <constraint firstItem="CmK-MO-ZdW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="hVW-q6-atV"/>
-                    <constraint firstItem="OSg-Zo-FEa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="ve5-zx-p7W"/>
-                    <constraint firstItem="CNd-MC-jUx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="wGk-HF-vpV"/>
+                    <constraint firstItem="rdC-Pn-gHD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="2Ya-O5-Ugq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="CNd-MC-jUx" secondAttribute="trailing" constant="5" id="9Sw-fe-DqO"/>
+                    <constraint firstItem="735-hL-FCk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="9gd-ou-cJ7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="735-hL-FCk" secondAttribute="trailing" constant="5" id="Cp0-Re-q2B"/>
+                    <constraint firstItem="OJ1-A4-IOn" firstAttribute="top" secondItem="rdC-Pn-gHD" secondAttribute="bottom" constant="2" id="Frm-fe-RLk"/>
+                    <constraint firstItem="XxL-Jk-QlK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Khg-6M-sTQ"/>
+                    <constraint firstItem="CNd-MC-jUx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-2" id="Mc9-6R-E5M"/>
+                    <constraint firstItem="735-hL-FCk" firstAttribute="top" secondItem="XxL-Jk-QlK" secondAttribute="bottom" constant="3" id="Mu4-Rk-yzN"/>
+                    <constraint firstItem="OJ1-A4-IOn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="OFF-2o-WEO"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="OSg-Zo-FEa" secondAttribute="trailing" constant="5" id="T8J-qm-FUY"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="735-hL-FCk" secondAttribute="bottom" constant="-6.5" id="U8Z-0g-IeP"/>
+                    <constraint firstItem="rdC-Pn-gHD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="YKL-SH-B5f"/>
+                    <constraint firstItem="XxL-Jk-QlK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-3" id="ZaO-ps-9m1"/>
+                    <constraint firstItem="OSg-Zo-FEa" firstAttribute="top" secondItem="CNd-MC-jUx" secondAttribute="bottom" constant="6" id="klK-EB-dEo"/>
+                    <constraint firstItem="XxL-Jk-QlK" firstAttribute="top" secondItem="OJ1-A4-IOn" secondAttribute="bottom" constant="4" id="l9n-yM-7cU"/>
+                    <constraint firstItem="CmK-MO-ZdW" firstAttribute="leading" secondItem="rdC-Pn-gHD" secondAttribute="trailing" constant="5" id="sfc-Lj-HhO"/>
+                    <constraint firstItem="CmK-MO-ZdW" firstAttribute="baseline" secondItem="OSg-Zo-FEa" secondAttribute="baseline" id="vCG-Uh-iuP"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -97,7 +96,7 @@
                 <outlet property="posterLabel" destination="CmK-MO-ZdW" id="MMX-ZB-uAx"/>
                 <outlet property="quoteLabel" destination="OJ1-A4-IOn" id="daR-aK-xiW"/>
             </connections>
-            <point key="canvasLocation" x="-475" y="268.5"/>
+            <point key="canvasLocation" x="-475" y="263.5"/>
         </tableViewCell>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
