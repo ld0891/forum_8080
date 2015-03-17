@@ -45,7 +45,7 @@ PODS:
   - SDWebImage (3.7.1):
     - SDWebImage/Core (= 3.7.1)
   - SDWebImage/Core (3.7.1)
-  - SVProgressHUD (HEAD based on 1.1.2)
+  - SVProgressHUD (1.1.2)
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
@@ -54,7 +54,7 @@ DEPENDENCIES:
   - hpple (~> 0.1)
   - MMDrawerController (~> 0.5.7)
   - MWPhotoBrowser (~> 1.4.1)
-  - SVProgressHUD (HEAD)
+  - SVProgressHUD
   - SWRevealViewController
 
 SPEC CHECKSUMS:
