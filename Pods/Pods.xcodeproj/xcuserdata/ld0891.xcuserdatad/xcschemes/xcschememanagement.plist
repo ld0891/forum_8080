@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MMDrawerController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MWPhotoBrowser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -54,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-SloppySwiper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-hpple.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -66,67 +66,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>0C191F349D8843A602DDBBAF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1C1CB39F71FEFA8357CEC35B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>391F6144E4762D1791D8E2F3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4FE3F9A18097D51480C34BC9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>51AAD1C35D29EBF11F72BADF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5B587156954F39CC0936ADB7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>67E5A2D82DC8DD31A992DAD2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7529D250B0D38482E83725E2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9130F660726A591D56D574B2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A558768953CB40A7E08677F1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E8B428B0CBA05E63023A0726</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EDEBDB7572BF434256E411C5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
