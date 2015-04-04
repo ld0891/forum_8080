@@ -16,6 +16,7 @@
 #import "ForumHTTPClient.h"
 
 #import <SWRevealViewController.h>
+#import <MMDrawerController.h>
 #import <AFNetworking/AFNetworkActivityIndicatorManager.h>
 
 @implementation AppDelegate
@@ -76,10 +77,12 @@
     
     UIColor *barColor = [[ForumInfo sharedInfo] navBgColor];
     frontController.navigationBar.barTintColor = barColor;
+    MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController: frontController
+                                                                           leftDrawerViewController: nil];
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController: nil
                                                                                       frontViewController: frontController];
     revealController.delegate = fltvc;
-    self.window.rootViewController = revealController;
+    self.window.rootViewController = drawerController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

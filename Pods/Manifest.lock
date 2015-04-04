@@ -1,5 +1,5 @@
 PODS:
-  - 1PasswordExtension (1.2)
+  - 1PasswordExtension (1.1.2)
   - AFNetworking (2.5.1):
     - AFNetworking/NSURLConnection (= 2.5.1)
     - AFNetworking/NSURLSession (= 2.5.1)
@@ -43,7 +43,7 @@ PODS:
   - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
-  - 1PasswordExtension
+  - 1PasswordExtension (~> 1.1.2)
   - AFNetworking (~> 2.5)
   - hpple (~> 0.1)
   - IDMPhotoBrowser
@@ -53,18 +53,18 @@ DEPENDENCIES:
   - SWRevealViewController
 
 SPEC CHECKSUMS:
-  1PasswordExtension: fcf300204bda5b5c78936dbb937a7d661f1ca796
-  AFNetworking: 10e85a00bb0f475124e4ff2677bf15693b2c1523
-  DACircularProgress: 0f92b77239d5f3c612fc66185e2998391ac8e054
-  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
+  1PasswordExtension: 38b5be7dd6dbe786c98f15d51d50ad21150db60a
+  AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
+  DACircularProgress: 3b41941891a56dc6aa17971f5322a9a38a6f446e
+  hpple: f4eb7c21a8db83ec264e5d614ec7509e10e5adec
   IDMPhotoBrowser: c8eb210679e1eb882018feae7c2220115571a5aa
-  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  MWPhotoBrowser: 2531e682860d62b8a7ba8659de02eb9040e431e5
-  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
-  PSTCollectionView: 6749df92885353521f55279a7ce2b293762e2be4
-  SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
-  SloppySwiper: 7d1e6af56b3f5dd6407d6130c8aec1319c4275da
-  SVProgressHUD: 3afb875b9eb23acd1bed9b82495695c68621a8b2
-  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+  MBProgressHUD: f3747dcbd45a9e855a6b0674550651e0b7ed250c
+  MWPhotoBrowser: be05b3b7521e961382a4ba5579685bf5a00b93d8
+  pop: 2f14a1ea61339767af9e66741b418c831b3844df
+  PSTCollectionView: d9f466e4554cc83260ca9bde7beb27f308e8fd76
+  SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
+  SloppySwiper: 732c1d6008b19748feb196e560fb304693221fbc
+  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
+  SWRevealViewController: f6d80638b8e12323e87ac79562345403a799cb77
 
-COCOAPODS: 0.36.3
+COCOAPODS: 0.36.1
