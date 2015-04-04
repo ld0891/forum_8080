@@ -30,11 +30,16 @@
 #import <Foundation/Foundation.h>
 
 
-@interface TFHppleElement : NSObject
+@interface TFHppleElement : NSObject {
+@private
+  
+  NSDictionary * node;
+  __unsafe_unretained TFHppleElement *parent;
+}
 
-- (id) initWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(NSString *)theEncoding;
+- (id) initWithNode:(NSDictionary *) theNode;
 
-+ (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode isXML:(BOOL)isDataXML withEncoding:(NSString *)theEncoding;
++ (TFHppleElement *) hppleElementWithNode:(NSDictionary *) theNode;
 
 @property (nonatomic, copy, readonly) NSString *raw;
 // Returns this tag's innerHTML content.
@@ -64,7 +69,7 @@
 // Returns YES if this is a text node
 - (BOOL)isTextNode;
 
-// Provides easy access to the content of a specific attribute,
+// Provides easy access to the content of a specific attribute, 
 // such as 'href' or 'class'.
 - (NSString *) objectForKey:(NSString *) theKey;
 
@@ -95,15 +100,5 @@
 // Returns the string contained by the first text node from this element's children
 // Convenience method which can be used instead of firstTextChild.content
 - (NSString *) text;
-
-// Returns elements searched with xpath
-- (NSArray *) searchWithXPathQuery:(NSString *)xPathOrCSS;
-
-// Returns the first element searched with xpath
-- (TFHppleElement *) firstChildSearchWithXPathQuery:(NSString *)xPathOrCSS;
-
-// Custom keyed subscripting
-- (id)objectForKeyedSubscript:(id)key;
-
 
 @end
