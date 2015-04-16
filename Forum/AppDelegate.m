@@ -79,7 +79,8 @@
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController: nil
                                                                                       frontViewController: frontController];
     revealController.delegate = fltvc;
-    self.window.rootViewController = revealController;
+    self.viewController = revealController;
+    self.window.rootViewController = self.viewController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

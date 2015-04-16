@@ -22,7 +22,7 @@
                                 data:(NSData *)data
                                error:(NSError *__autoreleasing *)error
 {
-    TFHpple *hpple = [TFHpple hppleWithHTMLData: data];
+    TFHpple *hpple = [TFHpple hppleWithHTMLData: data encoding: @"NSUTF8StringEncoding"];
     return hpple;
 }
 

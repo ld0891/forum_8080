@@ -178,7 +178,14 @@
         
         if ( loginRange.location != NSNotFound ) {
             self.isLoggedin = NO;
-            [SVProgressHUD showErrorWithStatus: @"登录失效\n请退出后重新登录"];
+            [SVProgressHUD showErrorWithStatus: @"登录失效\n请重新登录"];
+            SWRevealViewController *revealController = [self.listController revealViewController];
+            ForumLoginViewController *loginViewController = [[ForumLoginViewController alloc] init];
+            [revealController setFrontViewPosition: FrontViewPositionLeft animated: YES];
+            revealController.rearViewRevealWidth = [ForumInfo sharedInfo].loginWidth;
+            revealController.rearViewRevealOverdraw = [ForumInfo sharedInfo].overdrawWidth;
+            [revealController setRearViewController: loginViewController animated: YES];
+            [revealController setFrontViewPosition: FrontViewPositionRight animated: YES];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [SVProgressHUD showErrorWithStatus: @"网络异常"];
