@@ -57,7 +57,7 @@
                              ForumListItem *newItem = [[ForumListItem alloc] init];
                              
                              NSString *tid = [rawHtml substringWithRange: [result rangeAtIndex: 1]];
-                             NSString *url = [rawHtml substringWithRange: [result rangeAtIndex: 2]];
+                             //NSString *url = [rawHtml substringWithRange: [result rangeAtIndex: 2]];
                              NSString *title = [rawHtml substringWithRange: [result rangeAtIndex: 3]];
                              NSString *uid = [rawHtml substringWithRange: [result rangeAtIndex: 4]];
                              NSString *username = [rawHtml substringWithRange: [result rangeAtIndex: 5]];
@@ -69,7 +69,7 @@
                              newItem.uid = [NSNumber numberWithInteger: [uid integerValue]];;
                              // Replace HTML entites in title with correct characters.
                              newItem.title = [title forum_correctHtmlEntities];
-                             newItem.postDetailURL = url;
+                             newItem.postDetailURL = [NSString stringWithFormat: @"/forum.php?mod=viewthread&tid=%@", tid];
                              newItem.posterName = username;
                              newItem.numOfReply = [reply integerValue];
                              newItem.numOfView = [view integerValue];

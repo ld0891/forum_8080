@@ -64,8 +64,12 @@
     if ( self ) {
         self.requestSerializer = [AFHTTPRequestSerializer serializer];
         self.responseSerializer = [AFHTTPResponseSerializer serializer];
-        [self.requestSerializer setValue: @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.1.25 (KHTML, like Gecko) Version/8.0 Safari/600.1.25"
+        
+        [self.requestSerializer setValue: @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17"
                       forHTTPHeaderField: @"User-Agent"];
+        [self.requestSerializer setValue: @"bbs.8080.net"
+                      forHTTPHeaderField: @"Host"];
+
         NSString *path = [self archivePath];
         NSDictionary *rootDic = [NSKeyedUnarchiver unarchiveObjectWithFile: path];
         
@@ -133,19 +137,15 @@
             self.responseSerializer = [AFImageResponseSerializer serializer];
             [self.requestSerializer setValue: @"http://bbs.8080.net/member.php?mod=logging&action=login"
                           forHTTPHeaderField: @"Referer"];
-            [self.requestSerializer setValue: @"bbs.8080.net"
-                          forHTTPHeaderField: @"Host"];
-            
+
             [self GET: imgURL parameters: nil success: ^(NSURLSessionDataTask *task, id responseObject) {
                 
                 [self.loginController showKeyboard];
                 [SVProgressHUD dismiss];
                 UIImage *codeImg = responseObject;
                 imageView.image = codeImg;
-                [self.requestSerializer setValue: nil
+                [self.requestSerializer setValue: @"http://bbs.8080.net/forum.php"
                               forHTTPHeaderField: @"Referer"];
-                [self.requestSerializer setValue: nil
-                              forHTTPHeaderField: @"Host"];
                 self.responseSerializer = [AFHTTPResponseSerializer serializer];
             }failure:^(NSURLSessionDataTask *task, NSError *error) {
                 [SVProgressHUD showErrorWithStatus: @"验证码获取失败"];
@@ -239,6 +239,9 @@
                     [self.listController pushSectionView];
                     self.loginController = nil;
                     self.isLoggedin = YES;
+                    [self.requestSerializer setValue: nil
+                                  forHTTPHeaderField: @"Content-Type"];
+
                 }
             } failure:^(NSURLSessionDataTask *task, NSError *error) {
                 NSLog( @"%@", error.localizedDescription );

@@ -21,7 +21,7 @@ PODS:
   - AFNetworking/UIKit (2.5.2):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - DACircularProgress (2.2.0)
+  - DACircularProgress (2.3.1)
   - hpple (0.2.0)
   - IDMPhotoBrowser (1.6.2):
     - AFNetworking
@@ -55,7 +55,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   1PasswordExtension: fcf300204bda5b5c78936dbb937a7d661f1ca796
   AFNetworking: fefbce9660acb17f48ae0011292d4da0f457bf36
-  DACircularProgress: 0f92b77239d5f3c612fc66185e2998391ac8e054
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   IDMPhotoBrowser: ebbfa6690456b72dd92d93b7bc11d71519f4d06d
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
