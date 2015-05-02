@@ -33,7 +33,7 @@
 
     // Parse the next page url
     NSRegularExpression *nxtRegex = [NSRegularExpression
-                                     regularExpressionWithPattern: @"</label><a href=\"(.*?)\\?t=1\" class=\"nxt\">下一页</a>"
+                                     regularExpressionWithPattern: @"</label><a href=\"(.*?)\" class=\"nxt\">下一页</a>"
                                      options: NSRegularExpressionDotMatchesLineSeparators
                                      error: error];
     [nxtRegex enumerateMatchesInString: rawHtml
