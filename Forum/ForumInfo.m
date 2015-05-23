@@ -39,8 +39,8 @@
         _codeURL = @"misc.php";
         _replyURL = @"forum.php";
         
-        _privateSectionNames = @[ @"微软同盟",
-                          @"安卓乐园",
+        _privateSectionNames = @[ @"巨硬同盟",
+                          @"猴机乐园",
                           @"苹果之家",
                           @"色友俱乐部",
                           @"宽带3G",
@@ -72,8 +72,8 @@
                           @"家政服务",
                           @"站务&招商" ];
         
-        _sectionKeyDic = @{ @"微软同盟": @"SettingsShowMicrosoftAlliance",
-                            @"安卓乐园": @"SettingsShowAndroidJoypark",
+        _sectionKeyDic = @{ @"巨硬同盟": @"SettingsShowMicrosoftAlliance",
+                            @"猴机乐园": @"SettingsShowAndroidJoypark",
                             @"苹果之家": @"SettingsShowAppleHome",
                             @"色友俱乐部": @"SettingsShowPhotographerClub",
                             @"宽带3G": @"SettingsShowBroadband3G",
@@ -107,8 +107,8 @@
         
         [self initSectionNames];
         
-        _sectionDic = @{ @"微软同盟": @101,
-                         @"安卓乐园": @91,
+        _sectionDic = @{ @"巨硬同盟": @101,
+                         @"猴机乐园": @91,
                          @"苹果之家": @95,
                          @"色友俱乐部": @96,
                          @"宽带3G": @97,
